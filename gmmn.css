@@ -1,0 +1,258 @@
+/* Responsive Navigation */
+@media only screen and (max-width: 839px) {
+  .site-header .title-area,
+  .site-header .header-widget-area {
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+  .site-header nav {
+    display: none;
+    background: #2b2b2b;
+    box-shadow: inset 0 5px 10px -10px rgba(0, 0, 0, 0.9);
+  }
+  .site-header .menu {
+    clear: both;
+    margin-bottom: 1.25rem;
+    color: #cccccc;
+    line-height: 1;
+  }
+  .site-header .menu a {
+    display: inline-block;
+    padding: 2rem;
+    color: #cccccc;
+  }
+  .site-header .menu a:hover {
+    color: salmon;
+  }
+  .site-header .sub-menu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .site-header .sub-menu a {
+    padding: 2rem;
+    font-size: 1.4rem;
+  }
+  .site-header .sub-menu .sub-menu-toggle {
+    padding: 1.8rem 2rem;
+  }
+  .site-header .menu-toggle {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .site-header .menu-toggle:before {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1rem;
+    color: #000;
+    font-family: 'dashicons';
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1;
+    content: "\f333";
+  }
+  .site-header .menu-item {
+    display: block;
+    text-align: left;
+  }
+  .nav-primary,
+  .nav-secondary,
+  .site-header .menu-item > .sub-menu {
+    display: none;
+  }
+  .site-header .sub-menu-toggle {
+    display: inline-block;
+    float: right;
+    padding: 2rem 2rem 1.8rem;
+  }
+  .site-header .sub-menu-toggle:before {
+    color: #cccccc;
+    font-family: "dashicons";
+    content: "\f347";
+  }
+  .site-header .sub-menu-toggle.menu-open:before {
+    content: "\f343";
+  }
+}
+
+/*.site-header nav {
+  display: none;
+}
+.site-header .menu {
+  clear: both;
+  margin-bottom: 12px;
+  color: #333;
+  line-height: 1;
+}
+.site-header .menu a {
+  display: inline-block;
+  padding: 20px;
+  color: #333;
+}
+.site-header .menu a:hover
+
+
+.site-header {
+  .nav-primary {
+    display: none;
+    background: $color-background-dark;
+    box-shadow: inset 0 5px 10px -10px rgba(0,0,0,0.9);
+  }
+  .menu {
+    clear: both;
+    margin-bottom: u(1.25rem);
+    color: $gray;
+    line-height: 1;
+    
+    a {
+      display: inline-block;
+      padding: u($pad);
+      color: $gray;
+      &:hover {
+        color: $color-brand;
+      }
+    }
+  }
+  .sub-menu {
+    display: none;
+    background-color: rgba(#000000, 0.05);
+    
+    a {
+      padding: u($pad);
+      font-size: u(1.4rem);
+    }
+
+    .sub-menu-toggle {
+      padding: u(1.8rem 2rem);
+    }
+  }
+  .menu-toggle {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+
+    &:before {
+      display: inline-block;
+      margin: u(0 auto);
+      padding: u($pad/2);
+      color: #000;
+      font-family: 'dashicons';
+      font-size: u(2rem);
+      font-weight: normal;
+      line-height: 1;
+      content: "\f333";
+    }
+  }
+
+  .menu-item {
+    display: block;
+    text-align: left;
+
+    > .sub-menu {
+      display: none;
+    }
+  }
+
+  .sub-menu-toggle {
+    display: inline-block;
+    float: right;
+    padding: u(2rem 2rem 1.8rem);
+
+    &:before {
+      color: $gray;
+      font-family: $font-icon;
+      content: "\f347";
+    }
+
+    &.menu-open:before {
+      content: "\f343";
+    }
+  }
+}
+.nav-primary,
+.nav-secondary {
+  display: none;  
+  }*/
+
+
+
+  /*@media only screen and (max-width: 800px) {
+    .site-header nav {
+      display: none;
+      padding: 10px;
+      background: #888;
+      box-shadow: inset 0 5px 10px -10px rgba(0, 0, 0, 0.9);
+    }
+    .site-header .menu {
+      clear: both;
+      margin-bottom: 1.25rem;
+      line-height: 1;
+    }
+    .site-header .menu a {
+      display: inline-block;
+      padding: 1rem;
+    }
+    .site-header .sub-menu {
+      display: none;
+    }
+    .site-header .sub-menu a {
+      padding: 2rem;
+      font-size: 1.4rem;
+    }
+    .site-header .sub-menu .sub-menu-toggle {
+      padding: 1.8rem 2rem;
+    }
+    .site-header .menu-toggle {
+      display: block;
+      text-align: center;
+      cursor: pointer;
+    }
+    .site-header .menu-toggle:before {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 1rem;
+      color: #000;
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1;
+      content: "MENU";
+    }
+    .site-header .menu-item {
+      display: block;
+      text-align: left;
+      color: #2b2b2b;
+    }
+    .nav-primary,
+    .nav-secondary,
+    .site-header .menu-item > .sub-menu {
+      display: none;
+    }
+    .site-header .sub-menu-toggle {
+      display: inline-block;
+      float: right;
+      padding: 2rem 2rem 1.8rem;
+    }
+    .site-header .sub-menu-toggle:before {
+      content: "V";
+    }
+    .site-header .sub-menu-toggle.menu-open:before {
+      content: "X";
+    }
+  }
+  .site-header .menu a:hover {
+    color: #2b2b2b;
+  }
+  .menu-h {
+    background: rgba(aquamarine,0.7);
+  }
+  .site-header .menu-p {
+    background-color: rgba(cyan,0.7);
+  }
+  .site-header .menu-s {
+    background-color: rgba(salmon,0.7);
+  }
+  ul, li {
+    margin: 0;
+    list-style-type: none;
+  }*/
