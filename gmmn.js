@@ -14,6 +14,14 @@ jQuery(function( $ ){
     $($navM).slideToggle();
   });
 
+  $(".menu-item-has-children .sub-menu").before('<div class="sub-menu-toggle"></div>');
+
+  $(".sub-menu-toggle").click(function(){
+    var menuDrop = $(this).parent().children('.sub-menu:first');
+    $(this).toggleClass("menu-open");
+    menuDrop.slideToggle();
+  });
+
   function mmNav(){
     var winW = window.innerWidth;
     var appended = false;
@@ -38,13 +46,5 @@ jQuery(function( $ ){
 
   $(window).resize(function(){
     mmNav();
-  });
-
-  $(".menu-item-has-children .sub-menu").before('<div class="sub-menu-toggle"></div>');
-
-  $(".sub-menu-toggle").click(function(){
-    var menuDrop = $(this).parent().children('.sub-menu:first');
-    $(this).toggleClass("menu-open");
-    menuDrop.slideToggle();
   });
 });

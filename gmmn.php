@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Genesis Mobile Multi Nav
- * Plugin URI: https://github.com/MikeGillihan/Simple-Genesis-Mobile-Nav
+ * Plugin URI: https://github.com/MikeGillihan/Genesis Mobile Multi Nav
  * Description: Concatenates multi Genesis nav menus into a single mobile nav.
  * Version: 0.0.1
  * Author: Michael Gillihan
@@ -28,7 +28,7 @@
 defined( 'ABSPATH' ) or die( "No script kiddies please!" );
 
 define( 'GMMN_VERSION', '0.0.1' );
-define( 'GMMN_NAME', 'Simple Genesis Mobile Nav');
+define( 'GMMN_NAME', 'Genesis Mobile Multi Nav');
 
 /**
  * Enqueue Plugin Scripts
