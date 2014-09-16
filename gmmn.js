@@ -24,16 +24,13 @@ jQuery(function( $ ){
 
   function mmNav(){
     var winW = window.innerWidth;
-    var appended = false;
-    if( winW < 840 && !appended ) {
-      appended = true;
+    if( winW < 840 ) {
       $($menuH).appendTo($navM);
       $($menuP).appendTo($navM);
       $($menuS).appendTo($navM);
       $navP.detach();
       $navS.detach();
     } else {
-      appended = false;
       $navP.insertBefore('.site-inner');
       $navS.insertBefore('.site-inner');
       $menuH.appendTo('.nav-header');
