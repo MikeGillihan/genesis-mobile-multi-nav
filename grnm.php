@@ -64,17 +64,10 @@ function grnm_enqueue_scripts() {
   };
 
   // Enqueue Plugin CSS
-  wp_enqueue_style( $handle , plugins_url( 'grnm.css', __FILE__ ) );
+  wp_enqueue_style( $handle , plugins_url( 'grnm.css', __FILE__ ), array('dashicons') );
 
   // Enqueue Theme JS
   wp_enqueue_script( $handle . '-js', plugins_url( 'grnm.js', __FILE__ ), array('jquery') );
-
-   // Check for Dashicons
-  if( wp_style_is( 'dashicons', 'enqueued' ) ) {
-    return;
-  } else {
-    wp_enqueue_style( 'dashicons' );
-  };
 }
 
 // Unhook 'primary' & 'secondary' navs from 'genesis_after_header'
