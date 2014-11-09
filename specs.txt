@@ -1,0 +1,23 @@
+Responsive
+Deals with multiple menus
+Semantic
+Deals with overly verbose header nav of Genesis
+Concatenates menus at mobile
+MVP == Nav is still viably usable in browsers above 1% without JS being enabled.
+
+PHP
+  New Genesis header that adds a "Header" menu location.
+  Combines Primary/Secondary menus into "Header" menu.
+
+HTML
+  Semantic
+  Accessible
+  Data Friendly
+  SEO Friendly
+  RTL
+
+CSS
+  Adjusts for multiple menus when not mobile.
+
+JS
+  Adds drop down functionality for menu + 1 level of submenu
