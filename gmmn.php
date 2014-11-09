@@ -1,12 +1,26 @@
 <?php
 /**
- * Plugin Name: Genesis Mobile Multi Nav
- * Plugin URI: https://github.com/MikeGillihan/Genesis Mobile Multi Nav
- * Description: Concatenates multi Genesis nav menus into a single mobile nav.
- * Version: 0.0.1
+ * Genesis Responsive Navigation Menu
+ * 
+ * Plugin Name: Genesis Responsive Navigation Menu
+ * Plugin URI: https://github.com/MikeGillihan/genesis-responsive-navigation-menu
+ * Description: Transforms standard Genesis navigation menus into a accessible, mobile-first and responsive navigation menu.
+ * Version: 1.1.0
  * Author: Michael Gillihan
  * Author URI: http://mikegillihan.com/
  * License: GPL2
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       genesis-header-nav
+ * Domain Path:       /languages
+ * GitHub Plugin URI: https://github.com/MikeGillihan/genesis-responsive-navigation-menu
+ * GitHub Branch:     master
+ *
+ * 
+ * @package   Genesis_Responsive_Navigation_Menu
+ * @author    Michael Gillihan
+ * @license   GPL-2.0+
+ * @link      https://github.com/MikeGillihan/genesis-responsive-navigation-menu
+ * @copyright 2014 Michael Gillihan
  */
 
 /*  Copyright 2014 Michael Gillihan
