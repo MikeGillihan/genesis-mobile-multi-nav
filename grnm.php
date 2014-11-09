@@ -70,25 +70,25 @@ function grnm_enqueue_scripts() {
   wp_enqueue_script( $handle . '-js', plugins_url( 'grnm.js', __FILE__ ), array('jquery') );
 }
 
-// Unhook 'primary' & 'secondary' navs from 'genesis_after_header'
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-remove_action( 'genesis_after_header', 'genesis_do_subnav');
+add_action( 'genesis_init', 'load_grnm', 99 );
+function load_grnm() {
+  // Unhook 'primary' & 'secondary' navs from 'genesis_after_header'
+  remove_action( 'genesis_after_header', 'genesis_do_nav' );
+  remove_action( 'genesis_after_header', 'genesis_do_subnav');
 
-// Register new 'header' navigation
-add_action( 'init', 'grnm_register_nav_menu' );
+  // Register new 'header' navigation
+  add_action( 'init', 'grnm_register_nav_menu' );
 
-/**
- * Hook 'header', 'primary', & 'secondary' navs to 'genesis_header'
- * Applies `genesis_header_nav_priority` filter. Use a value of 6-9 to add the nav before title + widget area, or
- * 11-14 to add it after. If you want to add it in between, you'll need to remove and re-build `genesis_do_header()`
- * so that the output of the widget area is in a different function that can be hooked to a later priority.
- */
-add_action( 'genesis_header', 'grnm_show_menu', apply_filters( 'genesis_header_nav_priority', 11 ) );
-add_action( 'genesis_header', 'genesis_do_nav', apply_filters( 'genesis_header_nav_priority', 12 ) );
-add_action( 'genesis_header', 'genesis_do_subnav', apply_filters( 'genesis_header_nav_priority', 13 ) );
-
-// Add header-full-width class if needed.
-add_filter( 'body_class', array( $this, 'body_classes' ), 15 );
+  /**
+   * Hook 'header', 'primary', & 'secondary' navs to 'genesis_header'
+   * Applies `genesis_header_nav_priority` filter. Use a value of 6-9 to add the nav before title + widget area, or
+   * 11-14 to add it after. If you want to add it in between, you'll need to remove and re-build `genesis_do_header()`
+   * so that the output of the widget area is in a different function that can be hooked to a later priority.
+   */
+  add_action( 'genesis_header', 'grnm_show_menu', apply_filters( 'genesis_header_nav_priority', 11 ) );
+  add_action( 'genesis_header', 'genesis_do_nav', apply_filters( 'genesis_header_nav_priority', 12 ) );
+  add_action( 'genesis_header', 'genesis_do_subnav', apply_filters( 'genesis_header_nav_priority', 13 ) );
+}
 
 /**
  * Register the menu location.
@@ -117,7 +117,7 @@ function grnm_show_menu() {
   );
 }
 
-add_filter( 'body_class', 'genesass_remove_header_full', 15 );
+add_filter( 'body_class', 'grnm_remove_header_full', 15 );
 /**
  * Remove then conditionally re-add header-full-width body class.
  *
@@ -131,7 +131,7 @@ add_filter( 'body_class', 'genesass_remove_header_full', 15 );
  *
  * @see genesis-config.php, 
  */
-function genesass_remove_header_full( array $classes ) {
+function grnm_remove_header_full( array $classes ) {
   // Loop through existing classes to remove 'header-full-width'
   foreach ( $classes as $index => $class ) {
     if ( 'header-full-width' === $class ) {
