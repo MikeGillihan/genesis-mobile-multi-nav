@@ -43,7 +43,7 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-defined( 'ABSPATH' ) or die( "No script kiddies please!" );
+defined( 'ABSPATH' ) or die( "Your mind powers will not work on me, boy." );
 
 define( 'GRNM_VERSION', '1.1.0' );
 define( 'GRNM_NAME', 'Genesis Responsive Navigation Menu');
@@ -70,6 +70,7 @@ function grnm_enqueue_scripts() {
   wp_enqueue_script( $handle . '-js', plugins_url( 'grnm.js', __FILE__ ), array('jquery') );
 }
 
+// Load Genesis specific functions on genesis_init
 add_action( 'genesis_init', 'load_grnm', 99 );
 function load_grnm() {
   // Unhook 'primary' & 'secondary' navs from 'genesis_after_header'
@@ -128,8 +129,6 @@ add_filter( 'body_class', 'grnm_remove_header_full', 15 );
  * Function must be hooked after priority 10, so Genesis has had a chance to do the filtering first.
  * 
  * @since 1.1.0
- *
- * @see genesis-config.php, 
  */
 function grnm_remove_header_full( array $classes ) {
   // Loop through existing classes to remove 'header-full-width'
