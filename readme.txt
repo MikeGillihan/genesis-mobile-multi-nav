@@ -6,4 +6,4 @@ Tested up to: 4.0
 License: GPL 2
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-Transforms standard Genesis navigation menus into mobile-first, accessible, responsive navigation menus.
+Transforms standard Genesis navigation menus into an accessible, mobile-first and responsive navigation menu.

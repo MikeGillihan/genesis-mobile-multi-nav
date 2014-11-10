@@ -1,9 +1,14 @@
+Mobile First
 Responsive
-Deals with multiple menus
+Performant
+Lightweight
 Semantic
+
+Deals with multiple menus
 Deals with overly verbose header nav of Genesis
 Concatenates menus at mobile
 MVP == Nav is still viably usable in browsers above 1% without JS being enabled.
+i18n support
 
 PHP
   New Genesis header that adds a "Header" menu location.
